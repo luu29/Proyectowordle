@@ -33,3 +33,13 @@ if __name__ == "__main__":
             print("!!! ERROR: La palabra introducida tiene una cantidad incorrecta de caracteres. Por favor vuelva a ingresar una palabra.")
         print("!!! ERROR: La palabra introducida no pertenece a la lista. Por favor vuelva a ingresar una palabra.")
         palabra = input (">>> INTRODUCIR PALABRAS DE 5 LETRAS:")
+      
+ 
+#ETAPA 3
+from colorama import init, Fore
+
+#para iniciar colorama
+init()
+
+for i in range(len(palabra))
+    
