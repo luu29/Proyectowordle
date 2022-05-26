@@ -36,10 +36,20 @@ if __name__ == "__main__":
       
  
 #ETAPA 3
-from colorama import init, Fore
+#from colorama import init, Fore
 
 #para iniciar colorama
-init()
+#init()
 
-for i in range(len(palabra))
+#for i in range(len(palabra))
     
+ 
+#ETAPA 3
+#from rich.console import Console
+#console = Console()
+
+#for i in range(len(palabra)):
+   # if i ==
+   # 
+import rich
+print(help(rich)
