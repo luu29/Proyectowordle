@@ -36,20 +36,12 @@ if __name__ == "__main__":
       
  
 #ETAPA 3
-#from colorama import init, Fore
+from colorama import init, Fore
 
 #para iniciar colorama
-#init()
+init()
 
-#for i in range(len(palabra))
-    
- 
-#ETAPA 3
-#from rich.console import Console
-#console = Console()
-
-#for i in range(len(palabra)):
-   # if i ==
-   # 
-import rich
-print(help(rich)
+for i in range(len(random)):
+    for j in range(len(palabra)):
+        if random[i] == palabra[j]:
+            print(Fore.GREEN + palabra[j])
