@@ -40,21 +40,32 @@ if __name__ == "__main__":
 #ETAPA 3
 
 #para iniciar colorama
-random1 = random.choice(palabras)
-for a in range(1, 7):
-    palabra = input (">>> INTRODUCIR PALABRAS DE 5 LETRAS:")
-    while palabra not in palabras:
-        print(Fore.RED + "!!! ERROR: La palabra introducida no pertenece a la lista. Por favor vuelva a ingresar una palabra.")
-        if len(palabra) != 5:
-            print(Fore.RED + "!!! ERROR: La palabra introducida tiene una cantidad incorrecta de caracteres. Por favor vuelva a ingresar una palabra.")
-        if palabra.isalpha() == False:
-            print(Fore.RED + "!!! ERROR: La palabra introducida contiene caracteres que no son letras. Por favor vuelva a ingresar una palabra.")
+for intentos in range(1,5):
+    intentos = 5
+    print("TIENES " + str(intentos) + " INTENTOS")
+    random1 = random.choice(palabras)
+    for a in range(1, 7):
         palabra = input (">>> INTRODUCIR PALABRAS DE 5 LETRAS:")
-    for i in range(len(palabra)):
-        if palabra[i] == random1[i]:
-            print(Fore.GREEN + palabra[i],end=" ")
-        elif palabra[i] in random1:
-            print(Fore.YELLOW + palabra[i],end=" ")
-        else:             
-            print(Fore.RED + palabra[i],end=" ")
-    print("  ")
+        while palabra not in palabras:
+            print(Fore.RED + "!!! ERROR: La palabra introducida no pertenece a la lista. Por favor vuelva a ingresar una palabra.")
+            if len(palabra) != 5:
+                print(Fore.RED + "!!! ERROR: La palabra introducida tiene una cantidad incorrecta de caracteres. Por favor vuelva a ingresar una palabra.")
+            if palabra.isalpha() == False:
+                print(Fore.RED + "!!! ERROR: La palabra introducida contiene caracteres que no son letras. Por favor vuelva a ingresar una palabra.")
+            palabra = input (">>> INTRODUCIR PALABRAS DE 5 LETRAS:")
+        for i in range(len(palabra)):
+            if palabra[i] == random1[i]:
+                print(Fore.GREEN + palabra[i],end=" ")
+            elif palabra[i] in random1:
+                print(Fore.YELLOW + palabra[i],end=" ")
+            else:             
+                print(Fore.RED + palabra[i],end=" ")
+        if intentos == 0:
+            print(" ")
+            print(Fore.RED + "NO TIENES MÁS INTENTOS, PERDISTE")
+        else:
+            intentos = intentos - 1
+            print(" ")
+            print("TE QUEDAN " + str(intentos) + " INTENTOS")
+            print(" ")
+    break
