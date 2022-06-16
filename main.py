@@ -6,7 +6,7 @@ colorama.init(autoreset=True)
 #ETAPA 1
 if __name__ == "__main__":
     archivo = open("listado.txt")
-    palabras =[]
+    palabras = []
     #print(">>> FILTRANDO PALABRAS DE 5 LETRAS")
     #print("### se realiza el proceso del filtrado de palabras ###")
     for i in range(1290):
@@ -29,7 +29,7 @@ if __name__ == "__main__":
    # palabra = input (">>> INTRODUCIR PALABRAS DE 5 LETRAS:")
     
     #while palabra not in palabras:
-     #   if palabra.isalpha() == False:
+     #   if palabra.isalpha:
        #     print("!!! ERROR: La palabra introducida contiene caracteres que no son letras. Por favor vuelva a ingresar una palabra.")
         #if len(palabra) != 5:
          #   print("!!! ERROR: La palabra introducida tiene una cantidad incorrecta de caracteres. Por favor vuelva a ingresar una palabra.")
@@ -61,7 +61,6 @@ for intentos in range(1,4):
             else:             
                 print(Fore.RED + palabra[i],end=" ")
         if palabra == random1:
-            print(" ")
             print(Fore.GREEN + "¡GANASTE :D!")
             break
         if palabra != random1:
@@ -72,5 +71,7 @@ for intentos in range(1,4):
         if intentos == 0:
             print(" ")
             print(Fore.RED + "NO TIENES MÁS INTENTOS, PERDISTE :(")
+            print(Fore.BLUE + "LA PALABRA ERA: " + str(random1))
             break
     break
+
