@@ -40,8 +40,9 @@ if __name__ == "__main__":
 #ETAPA 3
 
 #para iniciar colorama
-for intentos in range(1,4):
+for intentos in range(1,5):
     intentos = 5
+    print("¡¡¡WORDLE!!!")
     print("TIENES " + str(intentos) + " INTENTOS")
     random1 = random.choice(palabras)
     for a in range(1,6):
